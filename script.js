@@ -30,25 +30,6 @@ class VodOrders {
 
  
     createTotalCustomerUsage() {
-        // const customerMonthlyUsage = {};
-        // this.orders.forEach(order => {
-        //     const monthYear = `${order.orderDate.getMonth() + 1}-${order.orderDate.getFullYear()}`;
-        //     if (!customerMonthlyUsage[order.customerId]) {
-        //         customerMonthlyUsage[order.customerId] = {};
-        //     };
-        //     if (!customerMonthlyUsage[order.customerId][monthYear]) {
-        //         customerMonthlyUsage[order.customerId][monthYear] = 0;
-        //     };
-        //     customerMonthlyUsage[order.customerId][monthYear] += order.price;
-        // });
-
-        // console.log("create total customer usage report");
-        // console.log("Customer ID,Month,Total Usage");
-        // for (const customerId in customerMonthlyUsage) {
-        //     for (const monthYear in customerMonthlyUsage[customerId]) {
-        //         console.log(`${customerId},${monthYear},${customerMonthlyUsage[customerId][monthYear]}`);
-        //     };
-        // };
         const customerMonthlyUsage = {};
         const customerMonthlyDiscounts = {};
         this.orders.forEach(order => {
@@ -93,23 +74,6 @@ class VodOrders {
 
 
     createSummaryReport() {
-        // const monthlyRevenue = {};
-        // const monthlyOrders = {};
-        // this.orders.forEach(order => {
-        //     const monthYear = `${order.orderDate.getMonth() + 1}-${order.orderDate.getFullYear()}`;
-        //     if (!monthlyRevenue[monthYear]) {
-        //         monthlyRevenue[monthYear] = 0;
-        //         monthlyOrders[monthYear] = 0;
-        //     }
-        //     monthlyRevenue[monthYear] += order.price;
-        //     monthlyOrders[monthYear]++;
-        // });
-
-        // console.log("Create summery report:");
-        // console.log("Month,Total Revenue,Total Orders");
-        // for (const monthYear in monthlyRevenue) {
-        //     console.log(`${monthYear},${monthlyRevenue[monthYear]},${monthlyOrders[monthYear]}`);
-        // };
         const monthlyRevenue = {};
         const monthlyOrders = {};
         const monthlyDiscounts = {};
