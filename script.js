@@ -4,10 +4,10 @@ function parsCSVDate(orderDate){
     const parts = orderDate.split(" ");
     const datePart = parts[0];
     let [year, month, day] = datePart.split("-");
-    // Check if month is a string (i.e., abbreviation)
-
+    // Convert month abbreviation to numeric value
+    const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
     if (isNaN(month)) {
-        month = month.toUpperCase();
+        month = monthNames.indexOf(month.toUpperCase()) + 1;
     }
     const [hours, minutes, seconds] = parts[1].split(":");
     return new Date(year, month - 1, day, hours, minutes, seconds);
